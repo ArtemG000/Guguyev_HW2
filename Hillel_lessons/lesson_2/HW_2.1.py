@@ -12,7 +12,7 @@
 # print(third_digit)
 # print(fourth_digit)
 
-print("Зазначте,що програма працює з числами від -9999 до 9999")
+print("Зазначте,що програма працює з числами від -9999 до 9999 ")
 num_user1 = abs(float(input('Введіть чотиризначне число= ')))
 first_digit = int(num_user1 // 1000)
 second_digit = int(num_user1 // 100 - int(first_digit) * 10)
