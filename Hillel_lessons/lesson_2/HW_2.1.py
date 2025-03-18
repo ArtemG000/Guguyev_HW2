@@ -12,7 +12,7 @@
 # print(third_digit)
 # print(fourth_digit)
 
-print("Зазначте,що програма працює з невід'ємними числами до 9999 ")
+print("Зазначте,що програма працює з невід'ємними числами до 9999  ")
 num_user1 = int(input('Введіть чотиризначне число= '))
 first_digit = int(num_user1 // 1000)
 second_digit = int(num_user1 // 100 - first_digit * 10)
