@@ -16,8 +16,8 @@ list_1 = [0, 1, 7, 2, 4, 8] #=> (0 + 7 + 4) * 8 = 88
 # else:
 #     print(list_1)
 
-list_2 = list_1[::2]
-if list_2:
-    print((sum(list_2)) * list_1[-1])
+
+if list_1[::2]:
+    print((sum(list_1[::2])) * list_1[-1])
 else:
     print(list_1)
