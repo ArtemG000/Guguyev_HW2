@@ -8,6 +8,9 @@ user_input_number_2 = float(input('Введіть друге число - '))
 user_input_act = input('Введіть дію ( + , - . * . / ) - ')
 #if user_input_act != '+' and user_input_act != '-' and user_input_act != '*' and user_input_act != '/':
     #print('Дія не розпізнана')
+
+if user_input_number_2 == 0 and user_input_act == '/':
+    print('Ділення на нуль неможливо')
 if user_input_act == '+':
     result_ = user_input_number_1 + user_input_number_2
     print(result_)
@@ -17,7 +20,7 @@ elif user_input_act == '-':
 elif user_input_act == '*':
     result_ = user_input_number_1 * user_input_number_2
     print(result_)
-elif user_input_act == '/':
+elif user_input_act == '/' and user_input_number_2 != 0:
     result_ = user_input_number_1 / user_input_number_2
     print(result_)
 else:
