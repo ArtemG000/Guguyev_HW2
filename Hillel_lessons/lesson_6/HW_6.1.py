@@ -9,14 +9,16 @@ import string
 
 voc = list(string.ascii_letters)
 usr_input = input('Please enter two letters separated by a hyphen - ').replace('-', ' ').split()
-for el in voc:
-    if el == usr_input[0]:
-        usr_input[0] = voc.index(el)
-    if el == usr_input[1]:
-        usr_input[1] = voc.index(el)
+usr_input[0] = voc.index(usr_input[0])
+usr_input[1] = voc.index(usr_input[1]) + 1
+# for el in voc:
+#     if el == usr_input[0]:
+#         usr_input[0] = voc.index(el)
+#     if el == usr_input[1]:
+#         usr_input[1] = voc.index(el)
 # if usr_input[0] >= usr_input[1]:
 #     print(''.join(voc[usr_input[1]:(usr_input[0]+1)]))
 # else:
 #     print(''.join(voc[usr_input[0]:(usr_input[1]+1)]))
-print(''.join(voc[usr_input[0]:(usr_input[1]+1)]))
+print(''.join(voc[usr_input[0]:(usr_input[1])]))
 
