@@ -4,8 +4,6 @@
 #Artem Guguyev
 
 def say_hi(name, age):
-  name = input('Enter your name -')
-  age = int(input('Enter your age -'))
   return f'Hi. My name is {name} and I\'m {str(age)} years old'
 
 
