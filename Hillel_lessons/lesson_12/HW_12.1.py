@@ -22,18 +22,17 @@ def rem(line : str) -> str:
         text = text + line[end[j] + 1: starts[j+1]]
     return text
 
-# empty = codecs.open(r'C:\IT\Projects\GUGUYEV.txt', 'w', 'utf-8')
-
 def delete_html_tags(html_file, result_file='cleaned.txt'):
     empty = codecs.open(result_file, 'w', 'utf-8')
     with codecs.open(html_file, 'r', 'utf-8') as file:
-        html = file.readlines()
-        for i in html:
-            if rem(i) != '':
-                empty.write('\n' + rem(i))
-            else:
-                continue
+        html = file.read()
+        x = rem(html).split('\n')
+        for i in range(len(x)):
+            x[i] = x[i].strip()
+        y = [line for line in x if line != '']
+        empty.write('\n'.join(y))
     empty.close()
     return f'text added to {result_file}'
+
 a = delete_html_tags(r'C:\IT\Projects\draft.html', r'C:\IT\Projects\GUGUYEV.txt')
 print(a)
