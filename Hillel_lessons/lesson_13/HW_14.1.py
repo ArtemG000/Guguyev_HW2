@@ -3,6 +3,9 @@
 # І обробити його поза межами класу. Тобто. потрібно перехопити цей виняток, при спробі додавання 11-го студента
 #Artem Guguyev
 
+class FullGroupError(Exception):
+    pass
+
 class Human:
 
     def __init__(self, gender, age, first_name, last_name):
@@ -33,7 +36,7 @@ class Group:
         if len(self.group) < 10:
             self.group.add(student)
         else:
-            raise ValueError('The Group is full')
+            raise FullGroupError('The Group is full')
 
     def delete_student(self, last_name):
         if self.find_student(last_name) in self.group:
@@ -78,5 +81,5 @@ print(str(gr))
 
 try:
     gr.add_student(st11)
-except ValueError as error:
-    print(error)
+except FullGroupError as error:
+    print(f'ERROR! Its not possible to add a new student, because "{error}"')
